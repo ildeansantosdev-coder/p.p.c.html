@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fluente Brasil Academy</title>
+<style>
+body{
+    margin:0;
+    font-family:'Poppins',sans-serif;
+    background:#0F172A;
+    color:white;
+}
+
+/* HERO */
+.hero{
+    height:350px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+    url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f') center/cover;
+}
+
+.hero h1{
+    font-size:42px;
+    margin:10px 0;
+}
+
+.hero p{
+    color:#CBD5F5;
+    font-size:20px;
+}
+
+/* BANDERAS */
+.flags{
+    margin-top:15px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.flags img{
+    width:40px;
+}
+
+.arrow{
+    font-size:28px;
+    color:#22C55E;
+    text-shadow:0 0 10px #22C55E;
+    animation: mover 1s infinite ease-in-out alternate;
+}
+
+@keyframes mover{
+    from{ transform: translateX(0); }
+    to{ transform: translateX(12px); }
+}
+
+/* SOBRE MÍ */
+.sobre{
+    padding:30px 80px;
+    text-align:center;
+    background:#1E293B;
+    border-radius:15px;
+    box-shadow:0 0 20px #00000060;
+}
+
+.sobre h2{
+    font-size:36px;
+    margin-bottom:15px;
+    color:white;
+}
+
+.sobre p{
+    max-width:900px;
+    margin:auto;
+    font-size:18px;
+    line-height:1.6;
+    color:#CBD5F5;
+    text-align:justify;
+    font-style:normal;
+}
+
+/* MODULOS */
+.modulos{
+    display:flex;
+    flex-wrap:wrap;
+    gap:25px;
+    padding:40px;
+    justify-content:center;
+}
+
+.modulo{
+    flex:1 1 200px;
+    padding:25px;
+    border-radius:15px;
+    background:#334155;
+    border:2px solid #1E293B;
+    cursor:pointer;
+    transition:0.3s;
+    text-align:center;
+    font-weight:bold;
+    color:#fff;
+    font-size:18px;
+}
+
+.modulo:hover{
+    transform:translateY(-8px);
+    border-color:#22C55E;
+    background:#1E293B;
+    color:#22C55E;
+}
+
+/* PLAYER */
+.player-container{
+    display:none;
+    padding:30px;
+}
+
+.player{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.video-area iframe{
+    width:100%;
+    height:400px;
+    border-radius:12px;
+}
+
+.lista-aulas{
+    background:#1E293B;
+    border-radius:12px;
+    padding:10px;
+    max-height:400px;
+    overflow-y:auto;
+    flex:1 1 250px;
+}
+
+.aula{
+    padding:12px;
+    border-bottom:1px solid #334155;
+    cursor:pointer;
+    transition:0.2s;
+}
+
+.aula:hover{
+    background:#22C55E20;
+}
+
+/* BOTONES PRINCIPALES VERDE */
+.botoes{
+    text-align:center;
+    padding:50px 20px;
+}
+
+.btn{
+    background:#22C55E;
+    color:white;
+    font-weight:bold;
+    padding:18px 30px;
+    margin:10px;
+    border-radius:12px;
+    cursor:pointer;
+    display:inline-block;
+    font-size:18px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 20px #22C55E;
+}
+
+/* WHATSAPP */
+.whatsapp{
+    position:fixed;
+    bottom:25px;
+    right:25px;
+    background:#22C55E;
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:28px;
+    color:white;
+    text-decoration:none;
+    box-shadow:0 0 20px #22C55E;
+    animation:pulse 1.5s infinite;
+}
+
+@keyframes pulse{
+    0%{transform:scale(1);}
+    50%{transform:scale(1.1);}
+    100%{transform:scale(1);}
+}
+
+/* RODAPÉ */
+footer{
+    background:#020617;
+    padding:40px;
+    text-align:center;
+    color:#CBD5F5;
+}
+
+/* RESPONSIVO */
+@media(max-width:1024px){
+    .sobre{
+        padding:30px 30px;
+    }
+}
+
+@media(max-width:768px){
+    .player{
+        flex-direction:column;
+    }
+
+    iframe{
+        height:250px;
+    }
+    .sobre{
+        padding:20px 15px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="hero">
+    <h1>Fluente Brasil Academy</h1>
+    <p>Habla portugués con confianza desde las primeras clases</p>
+
+    <div class="flags">
+        <img src="https://cdn-icons-png.flaticon.com/512/197/197593.png" alt="España">
+        <div class="arrow">➡</div>
+        <img src="https://cdn-icons-png.flaticon.com/512/197/197386.png" alt="Brasil">
+    </div>
+</div>
+
+<!-- SOBRE MÍ -->
+<div class="sobre">
+    <h2>Sobre mí</h2>
+    <p lang="es" translate="no">
+        Soy Ildean Santos, <strong>profesor</strong> nativo de portugués brasileño. Hablo español e italiano y mi objetivo es ayudarte a hablar portugués de manera natural desde el primer día.  
+        <br><br>
+        Mi método es sencillo y práctico: aprenderás palabras, formarás frases y practicarás situaciones reales. Todo sin complicaciones ni teoría innecesaria.
+    </p>
+</div>
+
+<!-- MODULOS -->
+<div class="modulos" id="modulos"></div>
+
+<!-- PLAYER -->
+<div class="player-container" id="playerContainer">
+    <div class="player">
+        <div class="video-area" id="videoArea"></div>
+        <div class="lista-aulas" id="listaAulas"></div>
+    </div>
+</div>
+
+<!-- BOTONES -->
+<div class="botoes">
+    <div class="btn" onclick="conteudo1()">Cómo comunicarse en un viaje</div>
+    <div class="btn" onclick="conteudo2()">100 palabras más usadas</div>
+    <div class="btn" onclick="conteudo3()">Gírias brasileñas</div>
+</div>
+
+<!-- WHATSAPP -->
+<a class="whatsapp" href="https://wa.me/5598985523388" target="_blank">💬</a>
+
+<!-- RODAPÉ -->
+<footer>
+    <h3>Fluente Brasil Academy</h3>
+    <p>Ildean Santos</p>
+    <p>Igarapé do Meio - Maranhão, Brasil</p>
+</footer>
+
+<script>
+// CONTENIDO DE MODULOS
+const modulos = {
+    1: Array(8).fill("https://www.youtube.com/embed/dQw4w9WgXcQ"),
+    2: Array(8).fill("https://www.youtube.com/embed/dQw4w9WgXcQ"),
+    3: Array(8).fill("https://www.youtube.com/embed/dQw4w9WgXcQ"),
+    4: Array(8).fill("https://www.youtube.com/embed/dQw4w9WgXcQ"),
+    5: Array(8).fill("https://www.youtube.com/embed/dQw4w9WgXcQ")
+};
+
+// GENERAR MODULOS
+for(let i=1;i<=5;i++){
+    document.getElementById("modulos").innerHTML += `
+        <div class="modulo" onclick="abrirModulo(${i})">
+            Módulo ${i}
+        </div>
+    `;
+}
+
+// FUNCIONES
+function abrirModulo(id){
+    let lista = document.getElementById("listaAulas");
+    lista.innerHTML="";
+    modulos[id].forEach((video,i)=>{
+        lista.innerHTML += `<div class="aula" onclick="trocarVideo('${video}')">Clase ${i+1}</div>`;
+    });
+    document.getElementById("playerContainer").style.display="block";
+    trocarVideo(modulos[id][0]);
+}
+
+function trocarVideo(link){
+    document.getElementById("videoArea").innerHTML = `<iframe src="${link}" allowfullscreen></iframe>`;
+}
+
+// BOTONES PRINCIPALES
+function conteudo1(){trocarVideo("https://www.youtube.com/embed/VIDEO1");}
+function conteudo2(){trocarVideo("https://www.youtube.com/embed/VIDEO2");}
+function conteudo3(){trocarVideo("https://www.youtube.com/embed/VIDEO3");}
+</script>
+
+</body>
+</html>
